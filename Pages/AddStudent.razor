@@ -1,0 +1,36 @@
+﻿@page "/addstudent"
+@using BlazorApp.Models
+@using BlazorApp.Data
+@inject StudentService StudentService
+@inject Microsoft.AspNetCore.Components.NavigationManager NavigationManager
+
+<h1>Add Student</h1>
+
+<div>
+    <form>
+        <div class="form-group">
+            <label for="studName">Student Name:</label>
+            <input type="text" id="studName" class="form-control" @bind="@newStudent.StudName" />
+        </div>
+        <div class="form-group">
+            <label for="studAge">Age:</label>
+            <input type="number" id="studAge" class="form-control" @bind="@newStudent.StudAge" />
+        </div>
+        <div class="form-group">
+            <label for="studEmail">Email:</label>
+            <input type="email" id="studEmail" class="form-control" @bind="@newStudent.StudEmail" />
+        </div>
+        <div class="form-group">
+            <label for="studDepartment">Department:</label>
+            <input type="text" id="studDepartment" class="form-control" @bind="@newStudent.StudDepartment" />
+        </div>
+        <div class="form-group">
+            <label for="skills">Skills:</label>
+            <input type="text" id="skills" class="form-control" @bind="@newStudent.Skills" />
+        </div>
+
+        <button type="button" class="btn btn-success m-2" @onclick="AddStud">Add Student</button>
+        <button type="button" class="btn btn-primary m-2" @onclick="BackToList">Back to List</button>
+    </form>
+</div>
+

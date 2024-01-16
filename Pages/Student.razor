@@ -1,0 +1,55 @@
+﻿@page "/studentdata"
+
+<PageTitle>Student Details</PageTitle>
+
+@using BlazorApp.Models
+@using BlazorApp.Data
+@inject StudentService StudentService
+@inject Microsoft.AspNetCore.Components.NavigationManager NavigationManager
+
+<div>
+    <button class="btn btn-primary m-2" type="button" @onclick="NavigateToAddStudent">Add Student</button>
+    <button class="btn btn-primary m-2" type="button" @onclick="NavigateToDeleteStudent">Deleted Student</button>
+    <h1>Student Details</h1>
+    @* <div>
+        <div class="form-group me-2">
+            <input type="text" id="searchInput" class="form-control" placeholder="Search">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" type="button">Search</button>
+        </div>
+    </div> *@
+</div>
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>Student Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Department</th>
+            <th>Skills</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Studlists ?? Enumerable.Empty<BlazorApp.Models.StudentViewAllResult>())
+        {
+            <tr>
+                <td>@student.StudentId</td>
+                <td>@student.StudName</td>
+                <td>@student.StudAge</td>
+                <td>@student.StudEmail</td>
+                <td>@student.StudDepartment</td>
+                <td>@student.Skills</td>
+                <td>
+                    <button class="btn btn-warning btn-sm" @onclick='() => OnEditClicked(student.StudentId)'>Edit</button>
+                    <button class="btn btn-info btn-sm" @onclick='() => OnDetailsClicked(student.StudentId)'>Details</button>
+                    <button class="btn btn-danger btn-sm" @onclick='() => OnDeleteClicked(student.StudentId)'>Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

@@ -1,0 +1,77 @@
+﻿{
+   "CodeGenerationMode": 3,
+   "ContextClassName": "StudentContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "BlazorApp",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 2,
+   "SelectedToBeGenerated": 0,
+   "T4TemplatePath": null,
+   "Tables": [
+      {
+         "Name": "[dbo].[Student]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[BackStudent]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[DeleteSoft]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[RestoreStudent]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[StudentDeleteById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[StudentDeleteByyId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[StudentEdit]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[StudentViewAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[StudentViewById]",
+         "ObjectType": 1
+      }
+   ],
+   "UiHint": "desktop-fmgscam.Student.dbo",
+   "UncountableWords": null,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDateOnlyTimeOnly": false,
+   "UseDbContextSplitting": false,
+   "UseDecimalDataAnnotationForSprocResult": true,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSchemaNamespaces": false,
+   "UseSpatial": false,
+   "UseT4": false
+}

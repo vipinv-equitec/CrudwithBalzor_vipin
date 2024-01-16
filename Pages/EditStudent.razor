@@ -1,0 +1,51 @@
+﻿@page "/editstudent"
+@page "/editStudent/{id?}"
+@using BlazorApp.Models
+@using BlazorApp.Data
+@inject StudentService StudentService
+@inject Microsoft.AspNetCore.Components.NavigationManager NavigationManager
+
+<h1>Edit Student</h1>
+
+<div>
+    <form>
+        <div class="form-group">
+            <label for="studName">Student Name:</label>
+            @if (editedStudent != null)
+            {
+                <input type="text" id="studName" class="form-control" @bind="@editedStudent.StudName" />
+            }
+        </div>
+        <div class="form-group">
+            <label for="studAge">Age:</label>
+            @if (editedStudent != null)
+            {
+                <input type="text" id="StudAge" class="form-control" @bind="@editedStudent.StudAge" />
+            }
+        </div>
+        <div class="form-group">
+            <label for="studEmail">Email:</label>
+            @if (editedStudent != null)
+            {
+                <input type="text" id="StudEmail" class="form-control" @bind="@editedStudent.StudEmail" />
+            }
+        </div>
+        <div class="form-group">
+            <label for="studDepartment">Department:</label>
+            @if (editedStudent != null)
+            {
+                <input type="text" id="StudDepartment" class="form-control" @bind="@editedStudent.StudDepartment" />
+            }
+        </div>
+        <div class="form-group">
+            <label for="skills">Skills:</label>
+            @if (editedStudent != null)
+            {
+                <input type="text" id="Skills" class="form-control" @bind="@editedStudent.Skills" />
+            }
+        </div>
+
+        <button type="button" class="btn btn-primary m-2" @onclick="UpdateStudent">Update Student</button>
+        <button type="button" class="btn btn-primary m-2" @onclick="BackToList">Back to List</button>
+    </form>
+</div>

@@ -1,0 +1,32 @@
+﻿@page "/detailstudent/{studentId:int}"
+
+@using BlazorApp.Models
+@using BlazorApp.Data
+@inject StudentService StudentService
+@inject Microsoft.AspNetCore.Components.NavigationManager NavigationManager
+
+<h3>Student Details</h3>
+
+@if (Student != null)
+{
+    <dl>
+        <dt>Student ID</dt>
+        <dd>@Student.StudentId</dd>
+        <dt>Student Name</dt>
+        <dd>@Student.StudName</dd>
+        <dt>Age</dt>
+        <dd>@Student.StudAge</dd>
+        <dt>Email</dt>
+        <dd>@Student.StudEmail</dd>
+        <dt>Department</dt>
+        <dd>@Student.StudDepartment</dd>
+        <dt>Skills</dt>
+        <dd>@Student.Skills</dd>
+    </dl>
+}
+else
+{
+    <p>Student not found.</p>
+}
+<button type="button" class="btn btn-primary m-2" @onclick="BackToList">Back to List</button>
+
